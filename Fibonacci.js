@@ -1,12 +1,11 @@
-// Problem 1743 Codekata. Fibonacci Series
-function fibonacci(n){
-    if (n<=1){
-        return n;
-    }
-    else{
-        return fibonacci(n-1)+fibonacci(n-2);
-    }
+function fibonacci(n, memo = {}) {
+    if (n <= 1) return n;
+
+    if (memo[n]) return memo[n];
+
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+    return memo[n];
 }
-const number=10;
-console.log(fibonacci(number))
-//eg: 0112358
+
+const number = 456;
+console.log(fibonacci(number));

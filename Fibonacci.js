@@ -7,5 +7,6 @@ function fibonacci(n){
         return fibonacci(n-1)+fibonacci(n-2);
     }
 }
-const number=6;
+const number=10;
 console.log(fibonacci(number))
+//eg: 0112358
